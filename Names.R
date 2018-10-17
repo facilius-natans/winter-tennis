@@ -5,18 +5,23 @@ rows = 2
 pairs <- combn(groupA, m=rows, fun=NULL, simplify=TRUE)
 
 goodPairs <- NULL
+goodPairNumbers <- c()
 
-print('test')
-print(length(pairs))
-print(pairs[,120])
 for(i in 1:(length(pairs)/rows)) {
-  test <- pairs[,i]
-  print(test)
-  print(i)
-  print(test[1])
-  print(test[2])
-  # print(class(test))
+  goodPairNumbers <- c(goodPairNumbers, i)
 }  
 
 
+print(typeof(goodPairNumbers))
+#print(goodPairs)
+test2 <- combn(goodPairNumbers, m=rows, fun=NULL, simplify=TRUE)
+
+#print(test2)
+print(test2[,7140])
+print(test2[,6140])
+print(length(test2))
+
+print(test2[,7140][1])
+print(test2[,7140][2])
+print(pairs[,test2[,7140][2]])
 
